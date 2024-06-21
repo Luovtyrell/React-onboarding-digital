@@ -5,6 +5,18 @@ const tutorialData = [
     bgColor: undefined,
     image: undefined,
   },
+  {
+    title: 'Programa projectes propis',
+    description: 'Més val 10 hores treballant en projectes propis, que 10 hores mirant tutorials. La motivació i la implicació en el projecte ajudarà a accelerar el teu aprenentatge.',
+    bgColor: undefined,
+    image: undefined,
+  },
+  {
+    title: 'Proucra descansar',
+    description: "Descansar bé i desconnectar són vitals. D'aquesta manera reduiràs l'estrès i l'ansietat. Milloraràs la teva concentració i consolidaràs el teu aprenentatge. ",
+    bgColor: undefined,
+    image: undefined,
+  },
 ];
 
 export default tutorialData;

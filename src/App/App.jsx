@@ -4,6 +4,9 @@ import Card from "../Components/Card";
 
 function App() {
   const [step, setStep] = useState(0);
+  const nextStep = () => {
+    setStep((prev) => prev + 1);
+  };
 
   return (
     <>
@@ -12,6 +15,7 @@ function App() {
         description={tutorialData[step].description}
         bgColor={tutorialData[step].bgColor}
         image={tutorialData[step].image}
+        nextStep={nextStep}
       />
     </>
   );
