@@ -17,3 +17,8 @@
 .btn {
   border-radius: 50%;
 }
+
+.btn-light {
+  border-color: black;
+  background-color: white;
+}

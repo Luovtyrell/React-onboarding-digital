@@ -2,8 +2,11 @@ import PropTypes from "prop-types";
 import "./Card.css";
 
 const Card = (props) => {
-  const handleButtonClick = () => {
+  const handleButtonNext = () => {
     props.nextStep();
+  };
+  const handleButtonPrev = () => {
+    props.prevStep();
   };
 
   return (
@@ -17,20 +20,29 @@ const Card = (props) => {
       <div className="card-body">
         <h5 className="card-title pt-2">{props.title}</h5>
         <p className="card-text small">{props.description}</p>
-        <button className="btn btn-dark float-end" onClick={handleButtonClick}>
-          →
-        </button>
+        {props.id === 2 ? (
+          <>
+            <button className="btn btn-dark float-end" onClick={handleButtonNext}> → </button>
+            <button className="btn btn-light me-2 float-end" onClick={handleButtonPrev}> ← </button>
+          </>
+        ) : props.id === 1 ? (
+          <button className="btn btn-dark float-end" onClick={handleButtonNext}> → </button>
+        ) : (
+          <button className="btn btn-dark float-end" onClick={handleButtonPrev}> ← </button>
+        )}
       </div>
     </div>
   );
 };
 
 Card.propTypes = {
-  image: PropTypes.SVG,
+  id: PropTypes.number,
+  image: PropTypes.string,
   title: PropTypes.string,
   bgColor: PropTypes.string,
   description: PropTypes.string,
   nextStep: PropTypes.func,
+  prevStep: PropTypes.func,
 };
 
 export default Card;
