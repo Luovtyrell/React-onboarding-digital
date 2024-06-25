@@ -12,6 +12,10 @@ test("Card renders with default props", ({ expect }) => {
       description={testData.description}
       bgColor={testData.bgColor}
       image={testData.image}
+      nextStep={() => {}}  
+      prevStep={() => {}}  
+      step={0} 
+      totalSteps={tutorialData.length}
     />
   );
 
@@ -21,6 +25,8 @@ test("Card renders with default props", ({ expect }) => {
     description: actualDescription,
     bgColor: actualBgColor,
     image: actualImage,
+    nextStep: actualNextStep,
+    prevStep: actualPrevStep,
   } = cardComponent.props;
 
   expect(actualId).toBe(testData.id);
@@ -28,4 +34,6 @@ test("Card renders with default props", ({ expect }) => {
   expect(actualDescription).toBe(testData.description);
   expect(actualBgColor).toBe(testData.bgColor);
   expect(actualImage).toBe(testData.image);
+  expect(typeof actualNextStep).toBe("function");
+  expect(typeof actualPrevStep).toBe("function");
 });

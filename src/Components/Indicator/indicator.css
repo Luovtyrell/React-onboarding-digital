@@ -5,6 +5,7 @@
   border-radius: 50%;
   background-color: lightgrey;
   display: inline-block;
+  transition: width 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
 }
 
 .circle.active {
