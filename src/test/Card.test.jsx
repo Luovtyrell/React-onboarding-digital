@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import Card from "../Components/Card";
+import Card from "../Components/Card/Card";
 import tutorialData from "../Data/Data";
 
 test("Card renders with default props", ({ expect }) => {

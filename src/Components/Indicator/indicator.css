@@ -1,0 +1,14 @@
+.circle {
+  width: 0.31rem;
+  height: 0.37rem;
+  margin: 0 0.18rem;
+  border-radius: 50%;
+  background-color: lightgrey;
+  display: inline-block;
+}
+
+.circle.active {
+  width: 1rem;
+  border-radius: 0.62rem;
+  background-color: black
+}

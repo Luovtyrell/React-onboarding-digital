@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import tutorialData from "../Data/Data";
-import Card from "../Components/Card";
+import Card from "../Components/Card/Card";
 
 function App() {
   const [step, setStep] = useState(0);
@@ -24,6 +24,8 @@ function App() {
             bgColor={tutorialData[step].bgColor}
             nextStep={nextStep}
             prevStep={prevStep}
+            step={step}
+            totalSteps={tutorialData.length}
           />
         </div>
       </div>

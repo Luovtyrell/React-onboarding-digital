@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import "./Card.css";
+import Indicator from "../Indicator/Indicator";
 
 const Card = (props) => {
   const handleButtonNext = () => {
@@ -30,6 +31,7 @@ const Card = (props) => {
         ) : (
           <button className="btn btn-dark float-end" onClick={handleButtonPrev}> ← </button>
         )}
+        <Indicator currentStep={props.step} totalSteps={props.totalSteps}/>
       </div>
     </div>
   );
@@ -43,6 +45,8 @@ Card.propTypes = {
   description: PropTypes.string,
   nextStep: PropTypes.func,
   prevStep: PropTypes.func,
+  step: PropTypes.number,
+  totalSteps: PropTypes.number
 };
 
 export default Card;
