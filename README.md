@@ -29,9 +29,9 @@ This project focuses on building a digital Onboarding experience using React, le
 - **Component-Based Architecture:** Utilizes React components for modular and maintainable code.
 - **State Management with Hooks:** Implements useState hook to manage and update the current step in the Onboarding process.
 - **Props for Data Passing**
-- **Responsive Design:** Ensures the application is responsive across various screen sizes using Bootstrap 5**
-- **Unit Testing with Vitest**
-- **PropType Validation**
+- **Responsive Design:** Ensures the application is responsive across various screen sizes using Bootstrap 5.
+- **Unit Testing with Vitest**.
+- **PropType Validation**.
 
 
 ## Technologies Used
